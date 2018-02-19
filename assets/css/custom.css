@@ -1,0 +1,26 @@
+.jumbotron {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+form input[type="text"], form input[type="password"] {
+	width: 100%;
+	border-radius: 4px;
+	padding: 15px;
+}
+
+form button {
+	width: 49%;
+	display: inline-block;
+}
+
+#pdf-button {
+	width: 99%;
+	margin-top: 30px;
+	padding: 20px 0;
+}
+
+#pdf-button[disabled] {
+	background-color: lightgray;
+	border-color: lightgray;
+}

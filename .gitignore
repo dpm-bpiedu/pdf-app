@@ -1,0 +1,5 @@
+# dependencies
+/mode_modules
+
+# misc
+.DS_Store
