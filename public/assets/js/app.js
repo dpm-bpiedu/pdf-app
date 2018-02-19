@@ -1,3 +1,4 @@
+console.log("app.js loaded");
 window.DocRaptor = {
   createAndDownloadDoc: function(api_key, doc_attrs) {
     var makeFormElement = function(name, value) {
