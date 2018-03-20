@@ -31,11 +31,10 @@ window.DocRaptor = {
 }
 
 var urlBase = "https://ne.edgecastcdn.net/0004BA/constellation/testing/pdf/";
-var urlStem = "";
 
 var myDoc = {
 	title: '',
-	url: urlBase + urlStem,
+	url: '',
 	status: true,
 	jsStatus: true,
 	key: ''
@@ -58,19 +57,26 @@ var downloadPDF = function() {
 $("#confirm").on("click", function(e) {
     e.preventDefault();
     myDoc.title = $("#title").val().trim();
-    urlStem = $("#path").val().trim();
+    myDoc.url = urlBase + $("#path").val().trim();
     myDoc.key = $("#api_key").val().trim();
     if ($("#test").prop("checked") === true) {
         myDoc.status = true;
     } else {
         myDoc.status = false;
     }
+	console.log(myDoc.title);
+	console.log("-------------");
+    console.log(myDoc.url);
+	console.log("-------------");
+	console.log(myDoc.key);
+	
     $("#pdf-button")
         .attr("value", "download PDF: " + myDoc.title)
         .prop("disabled", false);
 });
 
 $("#pdf-button").on("click", function() {
+    console.log(myDoc.url);
     downloadPDF();
 });
 
