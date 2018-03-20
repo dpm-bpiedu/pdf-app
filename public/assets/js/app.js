@@ -64,14 +64,10 @@ $("#confirm").on("click", function(e) {
     } else {
         myDoc.status = false;
     }
-	console.log(myDoc.title);
-	console.log("-------------");
-    console.log(myDoc.url);
-	console.log("-------------");
-	console.log(myDoc.key);
+
 	
     $("#pdf-button")
-        .attr("value", "download PDF: " + myDoc.title)
+        .attr("value", "download " + myDoc.title)
         .prop("disabled", false);
 });
 
